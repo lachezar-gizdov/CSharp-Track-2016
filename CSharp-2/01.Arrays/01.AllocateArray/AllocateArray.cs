@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace _01.AllocateArray
+class AllocateArray
 {
-    static class Program
+    static void Main()
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            arr[i] = i * 5;
+            Console.WriteLine(arr[i]);
         }
     }
 }

@@ -14,11 +14,12 @@ class MaximalSequence
         int count = 1;
         int maxcount = 0;
 
-        //logic
         for (int i = 0; i < n; i++)
         {
             nums[i] = int.Parse(Console.ReadLine());
         }
+
+        //logic
         Array.Sort(nums);
 
         for (int i = 1; i < n; i++)

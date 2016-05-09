@@ -15,6 +15,13 @@ class BinarySearch
 
         int index = Array.BinarySearch(nums, x);
 
-        Console.WriteLine(index);
+        if (index > 0)
+        {
+            Console.WriteLine(index);
+        }
+        else
+        {
+            Console.WriteLine(-1);
+        }
     }
 }

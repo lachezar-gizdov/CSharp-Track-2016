@@ -20,22 +20,22 @@ class MaximumSum
         int start = 0;
 
         //logic
-        for (int j = 0; j != n; ++j)
+        for (int i = 0; i != n; ++i)
         {
-            currentSum += nums[j];
-            end = j;
+            currentSum += nums[i];
+            end = i;
 
-            if (currentSum > maxSum || (currentSum == maxSum && (end - start) < (j - tempStart)))
+            if (currentSum > maxSum || (currentSum == maxSum && (end - start) < (i - tempStart)))
             {
                 maxSum = currentSum;
                 start = tempStart;
-                end = j;
+                end = i;
             }
 
             if (currentSum < 0)
             {
                 currentSum = 0;
-                tempStart = j + 1;
+                tempStart = i + 1;
             }
         }
 

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace AppearanceCount
+namespace LargerThanNeighbours
 {
-    class AppearanceCount
+    class LargerThanNeighbours
     {
         static void Main()
         {
@@ -10,17 +10,16 @@ namespace AppearanceCount
             string input = Console.ReadLine();
             string[] splitInput = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             int[] nums = Array.ConvertAll(splitInput, int.Parse);
-            int x = int.Parse(Console.ReadLine());
             int count = 0;
 
-            XCount(nums, n, x, count);
+            Larger(n, nums, count);
         }
 
-        static void XCount(int[] nums, int n, int x, int count)
+        static void Larger(int n, int[] nums, int count)
         {
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i < n - 1; i++)
             {
-                if (nums[i] == x)
+                if (nums[i] > nums[i-1] && nums[i] > nums[i+1])
                 {
                     count++;
                 }

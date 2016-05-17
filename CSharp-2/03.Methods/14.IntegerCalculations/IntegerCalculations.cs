@@ -1,78 +1,78 @@
 ﻿using System;
 
-namespace IntegerCalculations
+namespace longegerCalculations
 {
-    class IntegerCalculations
+    class longegerCalculations
     {
         static void Main()
         {
             string input = Console.ReadLine();
             string[] inputSplited = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            int[] inputToInt = Array.ConvertAll(inputSplited, int.Parse);
-            int min = 0;
-            int max = 0;
+            long[] inputTolong = Array.ConvertAll(inputSplited, long.Parse);
+            long min = 0;
+            long max = 0;
             double avg = 0;
-            int sum = 0;
-            int product = 1;
+            long sum = 0;
+            long product = 1;
 
-            Minimum(inputToInt, min);
-            Maximum(inputToInt, max);
-            Average(inputToInt, avg);
-            Sum(inputToInt, sum);
-            Product(inputToInt, product);
+            Minimum(inputTolong, min);
+            Maximum(inputTolong, max);
+            Average(inputTolong, avg);
+            Sum(inputTolong, sum);
+            Product(inputTolong, product);
         }
 
-        static void Minimum(int[] inputToInt, int min)
+        static void Minimum(long[] inputTolong, long min)
         {
-            min = inputToInt[0];
-            for (int i = 1; i < inputToInt.Length; i++)
+            min = inputTolong[0];
+            for (long i = 1; i < inputTolong.Length; i++)
             {
                 
-                min = Math.Min(min, inputToInt[i]);
+                min = Math.Min(min, inputTolong[i]);
             }
             Console.WriteLine(min);
         }
 
-        static void Maximum(int[] inputToInt, int max)
+        static void Maximum(long[] inputTolong, long max)
         {
-            max = inputToInt[0];
-            for (int i = 1; i < inputToInt.Length; i++)
+            max = inputTolong[0];
+            for (long i = 1; i < inputTolong.Length; i++)
             {
 
-                max = Math.Max(max, inputToInt[i]);
+                max = Math.Max(max, inputTolong[i]);
             }
             Console.WriteLine(max);
         }
 
-        static void Average(int[] inputToInt, double avg)
+        static void Average(long[] inputTolong, double avg)
         {
-            for (int i = 0; i < inputToInt.Length; i++)
+            for (long i = 0; i < inputTolong.Length; i++)
             {
 
-                avg += inputToInt[i]; 
+                avg += inputTolong[i]; 
             }
             avg /= 5;
 
             Console.WriteLine("{0:F2}", avg);
         }
 
-        static void Sum(int[] inputToInt, int sum)
+        static void Sum(long[] inputTolong, long sum)
         {
-            for (int i = 0; i < inputToInt.Length; i++)
+            for (long i = 0; i < inputTolong.Length; i++)
             {
 
-                sum += inputToInt[i];
+                sum += inputTolong[i];
             }
 
             Console.WriteLine(sum);
         }
 
-        static void Product(int[] inputToInt, int product)
+        static void Product(long[] inputTolong, long product)
         {
-            for (int i = 0; i < inputToInt.Length; i++)
+            for (long i = 0; i < inputTolong.Length; i++)
             {
 
-                product *= inputToInt[i];
+                product *= inputTolong[i];
             }
 
             Console.WriteLine(product);

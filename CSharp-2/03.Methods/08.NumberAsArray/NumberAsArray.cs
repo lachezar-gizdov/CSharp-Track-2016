@@ -1,49 +1,78 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace NumberAsArray
+public class NumbersAsArray
 {
-    class NumberAsArray
+    static void Main()
     {
-        static void Main()
+        var input = Console.ReadLine().Split(' ').Select(s => int.Parse(s)).ToArray();
+        int[] resultArray = new int[ArrayLength(input[0], input[1])];
+        int length = ArrayLength(input[0], input[1]);
+        //int[] firstArrayOfNumbers = Console.ReadLine().Split(' ').Select(s => int.Parse(s)).ToArray();
+        //int[] secondArrayOfNumbers = Console.ReadLine().Split(' ').Select(s => int.Parse(s)).ToArray();
+        var firstArrayOfNumbers = Console.ReadLine().Split(' ').Select(s => int.Parse(s)).ToList();
+        var secondArrayOfNumbers = Console.ReadLine().Split(' ').Select(s => int.Parse(s)).ToList();
+        Console.WriteLine(string.Join(" ", AddLists(firstArrayOfNumbers, secondArrayOfNumbers, length)));
+    }
+
+    public static int[] AddLists(List<int> firstArray, List<int> secondArray, int length)
+    {
+        //List<int> resultArray = new List<int>();
+        var resultArray = new int[length];
+        EqualizeLists(firstArray, secondArray);
+
+        for (int i = 0; i < resultArray.Length; i++)
         {
-            //string input = Console.ReadLine();
-            //string[] splitInput = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            //int[] numbers = Array.ConvertAll(splitInput, int.Parse);
-
-            string input1 = Console.ReadLine();
-            string[] firstArr = input1.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            int[] numbers1 = Array.ConvertAll(firstArr, int.Parse);
-
-            string input2 = Console.ReadLine();
-            string[] secondArr = input2.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            int[] numbers2 = Array.ConvertAll(secondArr, int.Parse);
-
-            int maxLenght = 0;
-
-            if (numbers1.Length < numbers2.Length)
+            int sum = firstArray[i] + secondArray[i];
+            if (sum >= 10)
             {
-                maxLenght = numbers1.Length;
+                resultArray[i] = sum - 10;
+                if (i < length - 1)
+                {
+                    firstArray[i + 1] += 1;
+                }
             }
             else
             {
-                maxLenght = numbers2.Length;
+                resultArray[i] = sum;
             }
+        }
 
-            int[] arrSum = new int[maxLenght];
+        return resultArray;
+    }
 
-            for (int i = 0; i < maxLenght; i++)
+    static int ArrayLength(int firstNumber, int secondNumber)
+    {
+        if (firstNumber > secondNumber)
+        {
+            return firstNumber;
+        }
+        else
+        {
+            return secondNumber;
+        }
+    }
+
+    public static void EqualizeLists(List<int> firstArray, List<int> secondArray)
+    {
+        int firstListLength = firstArray.Count;
+        int secondListLength = secondArray.Count;
+
+        if (firstListLength > secondListLength)
+        {
+            int numbersToAdd = firstListLength - secondListLength;
+            for (int i = 0; i < numbersToAdd; i++)
             {
-                arrSum[i] = numbers1[i] + numbers2[i];
-
-                if (arrSum[i] >= 10 )
-                {
-
-                }
+                secondArray.Add(0);
             }
-
-            foreach (var item in arrSum)
+        }
+        else
+        {
+            int numbersToAdd = secondListLength - firstListLength;
+            for (int i = 0; i < numbersToAdd; i++)
             {
-                Console.Write(item + " ");
+                firstArray.Add(0);
             }
         }
     }

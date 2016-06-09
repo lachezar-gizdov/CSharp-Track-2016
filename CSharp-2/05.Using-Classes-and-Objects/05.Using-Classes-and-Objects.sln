@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.TriangleSurfaceByThreeSi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.TriangleSurfaceByTwoSidesAndAnAngle", "06.TriangleSurfaceByTwoSidesAndAnAngle\06.TriangleSurfaceByTwoSidesAndAnAngle.csproj", "{9C43B2E8-04D1-44D6-8E27-DAFA32585205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.SumIntegers", "07.SumIntegers\07.SumIntegers.csproj", "{6C5400DB-4456-40B0-BF3B-53B445A8EABA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.SumIntegers", "08.SumIntegers\08.SumIntegers.csproj", "{E33BC6AB-D4BD-4B70-A49B-6EE23CCA9369}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{9C43B2E8-04D1-44D6-8E27-DAFA32585205}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C43B2E8-04D1-44D6-8E27-DAFA32585205}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C43B2E8-04D1-44D6-8E27-DAFA32585205}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C5400DB-4456-40B0-BF3B-53B445A8EABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C5400DB-4456-40B0-BF3B-53B445A8EABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C5400DB-4456-40B0-BF3B-53B445A8EABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C5400DB-4456-40B0-BF3B-53B445A8EABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E33BC6AB-D4BD-4B70-A49B-6EE23CCA9369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E33BC6AB-D4BD-4B70-A49B-6EE23CCA9369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E33BC6AB-D4BD-4B70-A49B-6EE23CCA9369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E33BC6AB-D4BD-4B70-A49B-6EE23CCA9369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

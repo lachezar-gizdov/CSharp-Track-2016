@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{60A8F074-C1F6-4E4E-A19C-ABF1511FE799}</ProjectGuid>
+    <ProjectGuid>{C57A1414-14B3-4D76-B6BE-FE9CD9C0A955}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_02.CorrectBrackets</RootNamespace>
-    <AssemblyName>02.CorrectBrackets</AssemblyName>
+    <RootNamespace>_03.CorrectBrackets</RootNamespace>
+    <AssemblyName>03.CorrectBrackets</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
